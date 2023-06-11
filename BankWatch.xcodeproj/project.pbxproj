@@ -14,7 +14,6 @@
 		FB4B9CD32A328E9F0064F7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CD22A328E9F0064F7D6 /* AppDelegate.swift */; };
 		FB4B9CD72A328E9F0064F7D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CD62A328E9F0064F7D6 /* LoginViewController.swift */; };
 		FB4B9CDC2A328EA10064F7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4B9CDB2A328EA10064F7D6 /* Assets.xcassets */; };
-		FB4B9CE72A3291560064F7D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4B9CE62A3291560064F7D6 /* LaunchScreen.storyboard */; };
 		FB4B9CEC2A3292F70064F7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CEB2A3292F70064F7D6 /* LoginView.swift */; };
 		FB4B9CF32A3382D30064F7D6 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CF22A3382D30064F7D6 /* OnboardingContainerViewController.swift */; };
 		FB4B9CF52A338B270064F7D6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */; };
@@ -30,7 +29,6 @@
 		FB4B9CD62A328E9F0064F7D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB4B9CDB2A328EA10064F7D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4B9CE02A328EA10064F7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB4B9CE62A3291560064F7D6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4B9CEB2A3292F70064F7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FB4B9CF22A3382D30064F7D6 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 		FB4B9CE82A3292480064F7D6 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB4B9CE62A3291560064F7D6 /* LaunchScreen.storyboard */,
 				FB4B9CDB2A328EA10064F7D6 /* Assets.xcassets */,
 				FB4B9CE02A328EA10064F7D6 /* Info.plist */,
 			);
@@ -173,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4B9CDC2A328EA10064F7D6 /* Assets.xcassets in Resources */,
-				FB4B9CE72A3291560064F7D6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
