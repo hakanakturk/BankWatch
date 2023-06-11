@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainViewController
 //        window?.rootViewController = onboardingContainerViewController
 //        window?.rootViewController = OnboardingContainerViewController()
-//        window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText:  "BankWatch is fasti easier to use, and has a brand new look and feel that will make you feel like you are back in 1989")
+//        window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText:  "BankWatch is fast easier to use, has a brand new look and feel that will make you feel like you are back in 1989")
         
         mainViewController.selectedIndex = 1
         return true
