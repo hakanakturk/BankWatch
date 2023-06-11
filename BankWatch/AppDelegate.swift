@@ -7,15 +7,18 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    
+            
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
     let dummyViewController = DummyViewController()
+    let mainViewController = MainViewController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -24,11 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate =  self
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
-        window?.rootViewController = loginViewController
+        
+        window?.rootViewController = mainViewController
 //        window?.rootViewController = onboardingContainerViewController
 //        window?.rootViewController = OnboardingContainerViewController()
 //        window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText:  "BankWatch is fasti easier to use, and has a brand new look and feel that will make you feel like you are back in 1989")
         
+        mainViewController.selectedIndex = 1
         return true
     }
 }
@@ -55,7 +60,6 @@ extension AppDelegate: LoginViewControllerDelegate {
         } else {
             setRootViewController(onboardingContainerViewController)
         }
-        
     }
 }
 
