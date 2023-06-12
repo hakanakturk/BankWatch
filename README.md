@@ -1,3 +1,3 @@
 # BankWatch
 
-Banking theme app build programmatically without storyboards.
+Banking theme app for learning programmatically interface building.
