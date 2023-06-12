@@ -21,6 +21,7 @@ class AccountSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupTableHeaderView()
     }
 }
 
