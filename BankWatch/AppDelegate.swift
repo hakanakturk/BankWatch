@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
         
-        window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
 //        window?.rootViewController = onboardingContainerViewController
 //        window?.rootViewController = OnboardingContainerViewController()
 //        window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText:  "BankWatch is fast easier to use, has a brand new look and feel that will make you feel like you are back in 1989")

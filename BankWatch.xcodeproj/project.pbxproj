@@ -17,6 +17,7 @@
 		FB4B9CEC2A3292F70064F7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CEB2A3292F70064F7D6 /* LoginView.swift */; };
 		FB4B9CF32A3382D30064F7D6 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CF22A3382D30064F7D6 /* OnboardingContainerViewController.swift */; };
 		FB4B9CF52A338B270064F7D6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */; };
+		FBC1BB662A372F3D00AD3EAE /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FB4B9CEB2A3292F70064F7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FB4B9CF22A3382D30064F7D6 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +75,10 @@
 		FB4B9CD12A328E9F0064F7D6 /* BankWatch */ = {
 			isa = PBXGroup;
 			children = (
+				FB4B9CE82A3292480064F7D6 /* Files */,
 				FB39322A2A35D35D009D580D /* Utilities */,
 				FB4B9CF12A3382B10064F7D6 /* Onboarding */,
-				FB4B9CE82A3292480064F7D6 /* Files */,
+				FBC1BB642A372F1600AD3EAE /* AccountSummary */,
 				FB4B9CEA2A3292CD0064F7D6 /* Login */,
 				FB4B9CD22A328E9F0064F7D6 /* AppDelegate.swift */,
 				FB3932322A36237D009D580D /* MainViewController.swift */,
@@ -109,6 +112,14 @@
 				FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FBC1BB642A372F1600AD3EAE /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 				FB4B9CD72A328E9F0064F7D6 /* LoginViewController.swift in Sources */,
 				FB4B9CF52A338B270064F7D6 /* OnboardingViewController.swift in Sources */,
 				FB3932332A36237D009D580D /* MainViewController.swift in Sources */,
+				FBC1BB662A372F3D00AD3EAE /* AccountSummaryViewController.swift in Sources */,
 				FB4B9CD32A328E9F0064F7D6 /* AppDelegate.swift in Sources */,
 				FB4B9CF32A3382D30064F7D6 /* OnboardingContainerViewController.swift in Sources */,
 			);
