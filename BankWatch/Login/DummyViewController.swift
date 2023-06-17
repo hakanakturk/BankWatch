@@ -22,7 +22,6 @@ class DummyViewController: UIViewController {
     }
 }
 
-
 extension DummyViewController {
     private func style(){
         stackView.translatesAutoresizingMaskIntoConstraints = false
