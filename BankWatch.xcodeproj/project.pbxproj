@@ -19,11 +19,22 @@
 		FB4B9CF52A338B270064F7D6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */; };
 		FB7B48572A3E146F00DF045F /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B48562A3E146E00DF045F /* DecimalUtils.swift */; };
 		FB7B48592A3E151E00DF045F /* CurrencyFormetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B48582A3E151E00DF045F /* CurrencyFormetter.swift */; };
+		FBADEF0A2A44AFFB002C20FF /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADEF092A44AFFB002C20FF /* CurrencyFormatterTests.swift */; };
 		FBB47FE82A37C31400963C53 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB47FE72A37C31400963C53 /* AccountSummaryCell.swift */; };
 		FBC1BB662A372F3D00AD3EAE /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */; };
 		FBC1BB682A3731B200AD3EAE /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1BB672A3731B200AD3EAE /* AccountSummaryHeaderView.swift */; };
 		FBC1BB6A2A3731F400AD3EAE /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC1BB692A3731F400AD3EAE /* AccountSummaryHeaderView.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB7B48622A3E2A3C00DF045F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB4B9CC72A328E9F0064F7D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB4B9CCE2A328E9F0064F7D6;
+			remoteInfo = BankWatch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FB3932282A35CD45009D580D /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +51,8 @@
 		FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FB7B48562A3E146E00DF045F /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		FB7B48582A3E151E00DF045F /* CurrencyFormetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormetter.swift; sourceTree = "<group>"; };
+		FB7B485E2A3E2A3C00DF045F /* BankWatchUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankWatchUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBADEF092A44AFFB002C20FF /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		FBB47FE72A37C31400963C53 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		FBC1BB672A3731B200AD3EAE /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
@@ -48,6 +61,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		FB4B9CCC2A328E9F0064F7D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB7B485B2A3E2A3C00DF045F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				FB4B9CD12A328E9F0064F7D6 /* BankWatch */,
+				FB7B485F2A3E2A3C00DF045F /* BankWatchUnitTests */,
 				FB4B9CD02A328E9F0064F7D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				FB4B9CCF2A328E9F0064F7D6 /* BankWatch.app */,
+				FB7B485E2A3E2A3C00DF045F /* BankWatchUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +146,14 @@
 				FB4B9CF42A338B270064F7D6 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FB7B485F2A3E2A3C00DF045F /* BankWatchUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBADEF092A44AFFB002C20FF /* CurrencyFormatterTests.swift */,
+			);
+			path = BankWatchUnitTests;
 			sourceTree = "<group>";
 		};
 		FBB47FE52A37C2C800963C53 /* Header */ = {
@@ -173,6 +203,24 @@
 			productReference = FB4B9CCF2A328E9F0064F7D6 /* BankWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FB7B485D2A3E2A3C00DF045F /* BankWatchUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB7B48642A3E2A3C00DF045F /* Build configuration list for PBXNativeTarget "BankWatchUnitTests" */;
+			buildPhases = (
+				FB7B485A2A3E2A3C00DF045F /* Sources */,
+				FB7B485B2A3E2A3C00DF045F /* Frameworks */,
+				FB7B485C2A3E2A3C00DF045F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB7B48632A3E2A3C00DF045F /* PBXTargetDependency */,
+			);
+			name = BankWatchUnitTests;
+			productName = BankWatchUnitTests;
+			productReference = FB7B485E2A3E2A3C00DF045F /* BankWatchUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +233,11 @@
 				TargetAttributes = {
 					FB4B9CCE2A328E9F0064F7D6 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					FB7B485D2A3E2A3C00DF045F = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+						TestTargetID = FB4B9CCE2A328E9F0064F7D6;
 					};
 				};
 			};
@@ -202,6 +255,7 @@
 			projectRoot = "";
 			targets = (
 				FB4B9CCE2A328E9F0064F7D6 /* BankWatch */,
+				FB7B485D2A3E2A3C00DF045F /* BankWatchUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +267,13 @@
 			files = (
 				FBC1BB6A2A3731F400AD3EAE /* AccountSummaryHeaderView.xib in Resources */,
 				FB4B9CDC2A328EA10064F7D6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB7B485C2A3E2A3C00DF045F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +301,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB7B485A2A3E2A3C00DF045F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBADEF0A2A44AFFB002C20FF /* CurrencyFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB7B48632A3E2A3C00DF045F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB4B9CCE2A328E9F0064F7D6 /* BankWatch */;
+			targetProxy = FB7B48622A3E2A3C00DF045F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FB4B9CE12A328EA10064F7D6 /* Debug */ = {
@@ -413,6 +490,45 @@
 			};
 			name = Release;
 		};
+		FB7B48652A3E2A3C00DF045F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q22QSB2U6G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hakanakturk.BankWatchUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankWatch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BankWatch";
+			};
+			name = Debug;
+		};
+		FB7B48662A3E2A3C00DF045F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q22QSB2U6G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hakanakturk.BankWatchUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankWatch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BankWatch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,6 +546,15 @@
 			buildConfigurations = (
 				FB4B9CE42A328EA10064F7D6 /* Debug */,
 				FB4B9CE52A328EA10064F7D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB7B48642A3E2A3C00DF045F /* Build configuration list for PBXNativeTarget "BankWatchUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB7B48652A3E2A3C00DF045F /* Debug */,
+				FB7B48662A3E2A3C00DF045F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

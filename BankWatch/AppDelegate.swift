@@ -28,12 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
         
-        window?.rootViewController = AccountSummaryViewController()
-//        window?.rootViewController = onboardingContainerViewController
-//        window?.rootViewController = OnboardingContainerViewController()
-//        window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText:  "BankWatch is fast easier to use, has a brand new look and feel that will make you feel like you are back in 1989")
+        let vc = mainViewController
+        vc.setStatusBar()
+
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
         
-        mainViewController.selectedIndex = 1
+        window?.rootViewController = vc
+
         return true
     }
 }
@@ -56,7 +58,7 @@ extension AppDelegate {
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
         if LocalState.hasOnboarded {
-            setRootViewController(dummyViewController)
+            setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContainerViewController)
         }
@@ -66,7 +68,7 @@ extension AppDelegate: LoginViewControllerDelegate {
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setRootViewController(dummyViewController)
+        setRootViewController(mainViewController)
     }
 }
 
