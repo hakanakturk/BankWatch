@@ -34,6 +34,12 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    
+    var titleLeadingAnchor: NSLayoutConstraint?
+    var descriptionLeadingAnchor: NSLayoutConstraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -43,6 +49,11 @@ class LoginViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         signInButton.configuration?.showsActivityIndicator = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
     }
 }
 
@@ -63,13 +74,17 @@ extension LoginViewController {
         errorMessageLabel.numberOfLines = 0
         errorMessageLabel.isHidden = true
         
+        appname.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         appname.translatesAutoresizingMaskIntoConstraints = false
         appname.textAlignment = .center
-        appname.textColor = .systemFill
+        appname.text = "BankWatch"
+        appname.alpha = 0
         
+        descriptionText.font = UIFont.preferredFont(forTextStyle: .title3)
         descriptionText.translatesAutoresizingMaskIntoConstraints = false
         descriptionText.textAlignment = .center
-        descriptionText.text = ""
+        descriptionText.text = "Solution for all your banking needs."
+        descriptionText.alpha = 0
         
     }
     
@@ -80,25 +95,34 @@ extension LoginViewController {
         view.addSubview(appname)
         view.addSubview(descriptionText)
         
-        /// AppName
         NSLayoutConstraint.activate([
-            appname.bottomAnchor.constraint(equalToSystemSpacingBelow: descriptionText.topAnchor, multiplier: 2),
-            appname.leadingAnchor.constraint(equalToSystemSpacingAfter: loginView.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: appname.trailingAnchor, multiplier: 1)
+            appname.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 20),
+            appname.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
         
         /// Description
         NSLayoutConstraint.activate([
-            descriptionText.bottomAnchor.constraint(equalToSystemSpacingBelow: loginView.topAnchor, multiplier: 2),
-            descriptionText.leadingAnchor.constraint(equalToSystemSpacingAfter: loginView.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: descriptionText.trailingAnchor, multiplier: 1)
+            descriptionText.topAnchor.constraint(equalToSystemSpacingBelow: appname.bottomAnchor, multiplier: 2),
+            descriptionText.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+            
         ])
         
+        titleLeadingAnchor = appname.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingAnchor?.isActive = true
+        
+        descriptionLeadingAnchor = descriptionText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        descriptionLeadingAnchor?.isActive = true
+        
         /// LoginView
+//        NSLayoutConstraint.activate([
+//            loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+//            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1)
+//        ])
         NSLayoutConstraint.activate([
-            loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1)
+            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 2),
+            view.centerYAnchor.constraint(equalTo: loginView.centerYAnchor),
         ])
         
         /// Button
@@ -145,5 +169,35 @@ extension LoginViewController {
     private func configureView(withMessage message: String) {
         errorMessageLabel.isHidden = false
         errorMessageLabel.text = message
+    }
+}
+
+extension LoginViewController {
+    private func animate() {
+        let duration = 1.0
+        
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.descriptionLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 1)
+        
+        let animator3 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.appname.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator3.startAnimation(afterDelay: 0.1)
+        
+        let animator4 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.descriptionText.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator4.startAnimation(afterDelay: 1.1)
     }
 }
