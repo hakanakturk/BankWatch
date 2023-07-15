@@ -51,6 +51,7 @@ extension AppDelegate {
 
     private func displayNextScreen() {
         if LocalState.hasOnboarded {
+            prepareMainView()
             setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContainerViewController)
@@ -75,7 +76,9 @@ extension AppDelegate {
     }
     
     private func prepareMainView() {
-        
+        mainViewController.setStatusBar()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
     }
 }
 

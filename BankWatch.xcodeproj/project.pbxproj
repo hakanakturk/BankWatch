@@ -26,6 +26,7 @@
 		FBC1BB662A372F3D00AD3EAE /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */; };
 		FBC1BB682A3731B200AD3EAE /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1BB672A3731B200AD3EAE /* AccountSummaryHeaderView.swift */; };
 		FBC1BB6A2A3731F400AD3EAE /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC1BB692A3731F400AD3EAE /* AccountSummaryHeaderView.xib */; };
+		FBF65E842A62CCB9005F9993 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF65E832A62CCB9005F9993 /* ShakeyBellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FBC1BB652A372F3D00AD3EAE /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		FBC1BB672A3731B200AD3EAE /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		FBC1BB692A3731F400AD3EAE /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		FBF65E832A62CCB9005F9993 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		FB4B9CD12A328E9F0064F7D6 /* BankWatch */ = {
 			isa = PBXGroup;
 			children = (
+				FBF65E822A62CC9A005F9993 /* Components */,
 				FB4B9CE82A3292480064F7D6 /* Files */,
 				FB39322A2A35D35D009D580D /* Utilities */,
 				FB4B9CF12A3382B10064F7D6 /* Onboarding */,
@@ -187,6 +190,14 @@
 				FBB47FE52A37C2C800963C53 /* Header */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		FBF65E822A62CC9A005F9993 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FBF65E832A62CCB9005F9993 /* ShakeyBellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				FB7B48572A3E146F00DF045F /* Decimal+Utils.swift in Sources */,
 				FB5B096E2A629D2F002C015E /* NSNotificationName.swift in Sources */,
 				FB4B9CD72A328E9F0064F7D6 /* LoginViewController.swift in Sources */,
+				FBF65E842A62CCB9005F9993 /* ShakeyBellView.swift in Sources */,
 				FBB47FE82A37C31400963C53 /* AccountSummaryCell.swift in Sources */,
 				FB4B9CF52A338B270064F7D6 /* OnboardingViewController.swift in Sources */,
 				FB3932332A36237D009D580D /* MainViewController.swift in Sources */,
